@@ -1,6 +1,7 @@
 
 #Ignore thumbnails created by Windows
 Thumbs.db
+
 #Ignore files built by Visual Studio
 *.obj
 *.exe
@@ -29,5 +30,21 @@ _ReSharper*/
 [Tt]est[Rr]esult*
 .vs/
 .vscode
+
 #Nuget packages folder
 packages/
+
+# dependencies
+node_modules/
+
+# production
+build/
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
