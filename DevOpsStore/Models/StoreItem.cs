@@ -9,5 +9,6 @@ namespace DevOpsStore.Models
     public class StoreItem : DbContext
     {
         public string Id { get; set; }
+        public string Name { get; set; }
     }
 }
