@@ -8,6 +8,41 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\css\**" />
+    <Compile Remove="wwwroot\images\**" />
+    <Content Remove="wwwroot\css\**" />
+    <Content Remove="wwwroot\images\**" />
+    <EmbeddedResource Remove="wwwroot\css\**" />
+    <EmbeddedResource Remove="wwwroot\images\**" />
+    <None Remove="wwwroot\css\**" />
+    <None Remove="wwwroot\images\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="WebApp\build\favicon.ico" />
+    <Content Include="WebApp\build\index.html" />
+    <Content Include="WebApp\build\precache-manifest.054774adbe886ee6e3c29227ef1745b5.js" />
+    <Content Include="WebApp\build\service-worker.js" />
+    <Content Include="WebApp\build\static\css\main.2cce8147.chunk.css" />
+    <Content Include="WebApp\build\static\css\main.2cce8147.chunk.css.map" />
+    <Content Include="WebApp\build\static\js\2.b41502e9.chunk.js" />
+    <Content Include="WebApp\build\static\js\2.b41502e9.chunk.js.map" />
+    <Content Include="WebApp\build\static\js\main.28647029.chunk.js" />
+    <Content Include="WebApp\build\static\js\main.28647029.chunk.js.map" />
+    <Content Include="WebApp\build\static\js\runtime~main.a8a9905a.js" />
+    <Content Include="WebApp\build\static\js\runtime~main.a8a9905a.js.map" />
+    <Content Include="WebApp\build\static\media\logo.5d5d9eef.svg" />
+    <Content Include="WebApp\public\index.html" />
+    <Content Include="WebApp\README.md" />
+    <Content Include="WebApp\src\App.css" />
+    <Content Include="WebApp\src\App.js" />
+    <Content Include="WebApp\src\App.test.js" />
+    <Content Include="WebApp\src\index.css" />
+    <Content Include="WebApp\src\index.js" />
+    <Content Include="WebApp\src\serviceWorker.js" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.7.9" />
@@ -15,8 +50,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\css\" />
-    <Folder Include="wwwroot\images\" />
+    <Folder Include="wwwroot\" />
   </ItemGroup>
 
 </Project>
