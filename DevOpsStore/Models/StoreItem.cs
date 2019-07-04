@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DevOpsStore.Models
 {
-    public class StoreItem : DbContext
+    public class StoreItem
     {
         public string Id { get; set; }
         public string Name { get; set; }

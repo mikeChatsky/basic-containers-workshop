@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using DevOpsStore.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DevOpsStore.Controllers
@@ -10,7 +11,24 @@ namespace DevOpsStore.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
-            return new[] { "value1", "value2" };
+            return Ok(new List<StoreItem>
+            {
+                new StoreItem()
+                {
+                    Id = "1",
+                    Name = "T-shirt"
+                },
+                new StoreItem()
+                {
+                    Id = "2",
+                    Name = "hat"
+                },
+                new StoreItem()
+                {
+                    Id = "3",
+                    Name = "shoes"
+                }
+            });
         }
 
         // GET api/values/5

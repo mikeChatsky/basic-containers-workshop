@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using DevOpsStore.Data;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using DevOpsStore.Models;
@@ -23,9 +21,27 @@ namespace DevOpsStore
 
         // GET: api/StoreItems
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<StoreItem>>> GetStoreItem()
+        public ActionResult<IEnumerable<StoreItem>> GetStoreItem()
         {
-            return await _context.StoreItem.ToListAsync();
+            return Ok(new List<StoreItem>
+            {
+                new StoreItem()
+                {
+                    Id = "1",
+                    Name = "T-shirt"
+                },
+                new StoreItem()
+                {
+                    Id = "2",
+                    Name = "hat"
+                },
+                new StoreItem()
+                {
+                    Id = "3",
+                    Name = "shoes"
+                }
+            });
+            // return await _context.StoreItem.ToListAsync();
         }
 
         // GET: api/StoreItems/5
